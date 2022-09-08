@@ -123,15 +123,15 @@ bool test_is_snake() {
 bool test_body_to_tail() {
   // TODO: Implement this function.
   char testcase_b2t = '>';
-  bool output_b2t = body_to_tail(testcase_b2t);
-  if (!assert_true("output_b2t", output_b2t)) { return false; }
+  char output_b2t = body_to_tail(testcase_b2t);
+  if (!assert_true('output_b2t', output_b2t)) { return false; }
   return true;
 }
 
 bool test_head_to_body() {
   // TODO: Implement this function.
   char testcase_h2b = 'A';
-  bool output_h2b = head_to_body(testcase_h2b);
+  char output_h2b = head_to_body(testcase_h2b);
   if (!assert_true("output_h2b", output_h2b)) { return false; }
   return true;
 }
@@ -140,8 +140,8 @@ bool test_get_next_x() {
   // TODO: Implement this function.
   char testcase_next_x = 'v';
   unsigned int crow = 5;
-  bool output_next_x = get_next_row(testcase_next_x, crow);
-  if (!assert_true("output_next_x", output_next_x)) { return false; }
+  unsigned int output_next_x = get_next_row(crow, testcase_next_x);
+  if (!assert_true("output_next_x", output_next_x)) { return true; }
   return true;
 }
 
@@ -149,7 +149,7 @@ bool test_get_next_y() {
   // TODO: Implement this function.
   char testcase_next_y = 'd';
   unsigned int ccol = 5;
-  bool output_next_y = get_next_row(testcase_next_y, ccol);
+  unsigned int output_next_y = get_next_row(ccol, testcase_next_y);
   if (!assert_true("output_next_y", output_next_y)) { return false; }
   return true;
 }
