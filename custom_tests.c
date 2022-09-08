@@ -98,36 +98,59 @@ bool test_is_vowel() {
 
 bool test_is_tail() {
   // TODO: Implement this function.
+  char testcase_tail = 'a';
+  bool output_tail = is_tail(testcase_tail);
+  if (!assert_true("output_tail", output_tail)) { return false; }
   return true;
 }
 
 bool test_is_head() {
   // TODO: Implement this function.
+  char testcase_head = 'A';
+  bool output_head = is_head(testcase_head);
+  if (!assert_true("output_head", output_head)) { return false; }
   return true;
 }
 
 bool test_is_snake() {
   // TODO: Implement this function.
+  char testcase_snake = '>';
+  bool output_snake = is_snake(testcase_snake);
+  if (!assert_true("output_snake", output_snake)) { return false; }
   return true;
 }
 
 bool test_body_to_tail() {
   // TODO: Implement this function.
+  char testcase_b2t = '>';
+  bool output_b2t = body_to_tail(testcase_b2t);
+  if (!assert_true("output_b2t", output_b2t)) { return false; }
   return true;
 }
 
 bool test_head_to_body() {
   // TODO: Implement this function.
+  char testcase_h2b = 'A';
+  bool output_h2b = head_to_body(testcase_h2b);
+  if (!assert_true("output_h2b", output_h2b)) { return false; }
   return true;
 }
 
 bool test_get_next_x() {
   // TODO: Implement this function.
+  char testcase_next_x = 'v';
+  unsigned int crow = 5;
+  bool output_next_x = get_next_row(testcase_next_x, crow);
+  if (!assert_true("output_next_x", output_next_x)) { return false; }
   return true;
 }
 
 bool test_get_next_y() {
   // TODO: Implement this function.
+  char testcase_next_y = 'd';
+  unsigned int ccol = 5;
+  bool output_next_y = get_next_row(testcase_next_y, ccol);
+  if (!assert_true("output_next_y", output_next_y)) { return false; }
   return true;
 }
 
