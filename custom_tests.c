@@ -98,49 +98,100 @@ bool test_is_vowel() {
 
 bool test_is_tail() {
   // TODO: Implement this function.
-  char testcase_tail = 'a';
-  bool output_tail = is_tail(testcase_tail);
-  if (!assert_true("output_tail", output_tail)) { return false; }
+  char c = 'w';
+  bool output_1 = is_tail(c);
+  if (!assert_true("output_1", output_1)) {
+    printf("test not working\n");
+    return false;
+  }
+  else{
+    printf("test works\n");
+  }
+  char c2 = 'y';
+  bool output2 = is_tail(c2);
+  if(!assert_false("output2", output2)){
+    return false;
+  }
   return true;
 }
 
 bool test_is_head() {
   // TODO: Implement this function.
-  char testcase_head = 'A';
-  bool output_head = is_head(testcase_head);
-  if (!assert_true("output_head", output_head)) { return false; }
-  return true;
+  char c = 'W';
+  bool output_1 = is_head(c);
+  if (!assert_true("output_1", output_1)) {
+    printf("test not working\n");
+    return false;
+  }
+  else{
+    printf("test works\n");
+  }
+  char c2 = 'Y';
+  bool output2 = is_head(c2);
+  if(!assert_false("output2", output2)){
+    return false;
+  }
 }
 
 bool test_is_snake() {
   // TODO: Implement this function.
-  char testcase_snake = '>';
-  bool output_snake = is_snake(testcase_snake);
-  if (!assert_true("output_snake", output_snake)) { return false; }
-  return true;
+  char c = '>';
+  bool output_1 = is_snake(c);
+  if (!assert_true("output_1", output_1)) {
+    printf("test not working\n");
+    return false;
+  }
+  else{
+    printf("test works\n");
+  }
+  char c2 = 'e';
+  bool output2 = is_snake(c2);
+  if(!assert_false("output2", output2)){
+    return false;
+  }
 }
 
 bool test_body_to_tail() {
   // TODO: Implement this function.
-  char testcase_b2t = '>';
-  char output_b2t = body_to_tail(testcase_b2t);
-  if (!assert_true('output_b2t', output_b2t)) { return false; }
-  return true;
+  char c = '>';
+  bool output_1 = body_to_tail(c);
+  if (!assert_true("output_1", output_1)) {
+    printf("test not working\n");
+    return false;
+  }
+  else{
+    printf("test works\n");
+  }
+  char c2 = '!';
+  bool output2 = body_to_tail(c2);
+  if(!assert_false("output2", output2)){
+    return false;
+  }
 }
 
 bool test_head_to_body() {
   // TODO: Implement this function.
-  char testcase_h2b = 'A';
-  char output_h2b = head_to_body(testcase_h2b);
-  if (!assert_true("output_h2b", output_h2b)) { return false; }
-  return true;
+  char c = 'D';
+  bool output_1 = head_to_body(c);
+  if (!assert_true("output_1", output_1)) {
+    printf("test not working\n");
+    return false;
+  }
+  else{
+    printf("test works\n");
+  }
+  char c2 = '!';
+  bool output2 = head_to_body(c2);
+  if(!assert_false("output2", output2)){
+    return false;
+  }
 }
 
 bool test_get_next_x() {
   // TODO: Implement this function.
   char testcase_next_x = 'v';
   unsigned int crow = 5;
-  unsigned int output_next_x = get_next_row(crow, testcase_next_x);
+  unsigned int output_next_x = get_next_col(crow, testcase_next_x);
   if (!assert_true("output_next_x", output_next_x)) { return true; }
   return true;
 }
