@@ -145,7 +145,7 @@ bool test_is_snake() {
   else{
     printf("test works\n");
   }
-  char c2 = 'e';
+  char c2 = ' ';
   bool output2 = is_snake(c2);
   if(!assert_false("output2", output2)){
     return false;
@@ -164,7 +164,7 @@ bool test_body_to_tail() {
   else {
     printf("test works\n");
   }
-  char c2 = '!';
+  char c2 = ' ';
   char output2 = body_to_tail(c2);
   if('?' != output2){
     return false;
