@@ -197,6 +197,7 @@ bool test_get_next_x() {
   char testcase_wrong = '>';
   unsigned int crow = 5;
   unsigned int output_next_x = get_next_row(crow, testcase_next_x);
+  unsigned int output_wrong = get_next_row(crow, testcase_wrong);
   if (6 != output_next_x) { 
     printf("test not working\n");
     return false; 
@@ -212,9 +213,10 @@ bool test_get_next_x() {
 bool test_get_next_y() {
   // TODO: Implement this function.
   char testcase_next_y = 'd';
-  char testcase_wrong = 'v'
+  char testcase_wrong = 'v';
   unsigned int ccol = 5;
   unsigned int output_next_y = get_next_col(ccol, testcase_next_y);
+  unsigned int output_wrong = get_next_col(ccol, testcase_wrong);
   if (6 != output_next_y) { 
     printf("test not working\n");
     return false; 
