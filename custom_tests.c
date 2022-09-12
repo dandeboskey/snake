@@ -107,7 +107,7 @@ bool test_is_tail() {
   else{
     printf("test works\n");
   }
-  char c2 = 'y';
+  char c2 = 'W';
   bool output2 = is_tail(c2);
   if(!assert_false("output2", output2)){
     return false;
@@ -117,7 +117,7 @@ bool test_is_tail() {
 
 bool test_is_head() {
   // TODO: Implement this function.
-  char c = 'W';
+  char c = 'A';
   bool output_1 = is_head(c);
   if (!assert_true("output_1", output_1)) {
     printf("test not working\n");
@@ -126,11 +126,12 @@ bool test_is_head() {
   else{
     printf("test works\n");
   }
-  char c2 = 'Y';
+  char c2 = 'a';
   bool output2 = is_head(c2);
-  if(!assert_false("output2", output2)){
+  if(!assert_false("output2", output2)) {
     return false;
   }
+  return true;
 }
 
 bool test_is_snake() {
@@ -149,42 +150,45 @@ bool test_is_snake() {
   if(!assert_false("output2", output2)){
     return false;
   }
+  return true;
 }
 
 bool test_body_to_tail() {
   // TODO: Implement this function.
   char c = '>';
-  bool output_1 = body_to_tail(c);
-  if (!assert_true("output_1", output_1)) {
+  char output_1 = body_to_tail(c);
+  if ('d' != output_1) {
     printf("test not working\n");
     return false;
   }
-  else{
+  else {
     printf("test works\n");
   }
   char c2 = '!';
-  bool output2 = body_to_tail(c2);
-  if(!assert_false("output2", output2)){
+  char output2 = body_to_tail(c2);
+  if('?' != output2){
     return false;
   }
+  return true;
 }
 
 bool test_head_to_body() {
   // TODO: Implement this function.
   char c = 'D';
-  bool output_1 = head_to_body(c);
-  if (!assert_true("output_1", output_1)) {
+  char output_1 = head_to_body(c);
+  if ('>' != output_1) {
     printf("test not working\n");
     return false;
   }
-  else{
+  else {
     printf("test works\n");
   }
-  char c2 = '!';
-  bool output2 = head_to_body(c2);
-  if(!assert_false("output2", output2)){
+  char c2 = 'd';
+  char output2 = head_to_body(c2);
+  if('?' != output2){
     return false;
   }
+  return true;
 }
 
 bool test_get_next_x() {
@@ -192,7 +196,7 @@ bool test_get_next_x() {
   char testcase_next_x = 'v';
   unsigned int crow = 5;
   unsigned int output_next_x = get_next_col(crow, testcase_next_x);
-  if (!assert_true("output_next_x", output_next_x)) { return true; }
+  if (!assert_true("output_next_x", output_next_x)) { return false; }
   return true;
 }
 
