@@ -194,6 +194,7 @@ bool test_head_to_body() {
 bool test_get_next_x() {
   // TODO: Implement this function.
   char testcase_next_x = 'v';
+  char testcase_wrong = '>';
   unsigned int crow = 5;
   unsigned int output_next_x = get_next_row(crow, testcase_next_x);
   if (6 != output_next_x) { 
@@ -201,6 +202,9 @@ bool test_get_next_x() {
     return false; 
   } else {
     printf("test works\n");
+  } if (6 == output_wrong) { 
+    printf("test not working\n");
+    return false; 
   }
   return true;
 }
@@ -208,6 +212,7 @@ bool test_get_next_x() {
 bool test_get_next_y() {
   // TODO: Implement this function.
   char testcase_next_y = 'd';
+  char testcase_wrong = 'v'
   unsigned int ccol = 5;
   unsigned int output_next_y = get_next_col(ccol, testcase_next_y);
   if (6 != output_next_y) { 
@@ -215,6 +220,9 @@ bool test_get_next_y() {
     return false; 
   } else {
     printf("test works\n");
+  } if (6 == output_wrong) { 
+    printf("test not working\n");
+    return false; 
   }
   return true;
 }
