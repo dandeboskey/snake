@@ -203,7 +203,7 @@ bool test_get_next_x() {
     return false; 
   } else {
     printf("test works\n");
-  } if (6 == output_wrong) { 
+  } if (5 != output_wrong) { 
     printf("test not working\n");
     return false; 
   }
@@ -222,7 +222,7 @@ bool test_get_next_y() {
     return false; 
   } else {
     printf("test works\n");
-  } if (6 == output_wrong) { 
+  } if (5 != output_wrong) { 
     printf("test not working\n");
     return false; 
   }
