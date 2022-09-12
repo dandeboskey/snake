@@ -196,7 +196,11 @@ bool test_get_next_x() {
   char testcase_next_x = 'v';
   unsigned int crow = 5;
   unsigned int output_next_x = get_next_col(crow, testcase_next_x);
-  if (!assert_true("output_next_x", output_next_x)) { return false; }
+  if (!assert_true("output_next_x", output_next_x)) { 
+    return false; 
+  } else {
+    printf("test works\n");
+  }
   return true;
 }
 
@@ -205,7 +209,11 @@ bool test_get_next_y() {
   char testcase_next_y = 'd';
   unsigned int ccol = 5;
   unsigned int output_next_y = get_next_row(ccol, testcase_next_y);
-  if (!assert_true("output_next_y", output_next_y)) { return false; }
+  if (!assert_true("output_next_y", output_next_y)) { 
+    return false; 
+  } else {
+    printf("test works\n");
+  }
   return true;
 }
 
