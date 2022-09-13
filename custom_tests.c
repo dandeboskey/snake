@@ -104,9 +104,9 @@ bool test_is_tail() {
     printf("test not working\n");
     return false;
   }
-  char c2 = 'W';
+  char c2 = 'a';
   bool output2 = is_tail(c2);
-  if(!assert_false("output2", output2)){
+  if(!assert_true("output2", output2)){
     return false;
   }
   return true;
@@ -120,9 +120,9 @@ bool test_is_head() {
     printf("test not working\n");
     return false;
   }
-  char c2 = 'a';
+  char c2 = 'S';
   bool output2 = is_head(c2);
-  if(!assert_false("output2", output2)) {
+  if(!assert_true("output2", output2)) {
     return false;
   }
   return true;
@@ -136,9 +136,9 @@ bool test_is_snake() {
     printf("test not working\n");
     return false;
   }
-  char c2 = ' ';
+  char c2 = '<';
   bool output2 = is_snake(c2);
-  if(!assert_false("output2", output2)){
+  if(!assert_true("output2", output2)){
     return false;
   }
   return true;
@@ -152,9 +152,9 @@ bool test_body_to_tail() {
     printf("test not working\n");
     return false;
   }
-  char c2 = 'o';
+  char c2 = '<';
   char output2 = body_to_tail(c2);
-  if('?' != output2){
+  if('a' != output2){
     return false;
   }
   return true;
@@ -168,9 +168,9 @@ bool test_head_to_body() {
     printf("test not working\n");
     return false;
   }
-  char c2 = 'd';
+  char c2 = 'A';
   char output2 = head_to_body(c2);
-  if('?' != output2){
+  if('<' != output2){
     return false;
   }
   return true;
@@ -179,36 +179,34 @@ bool test_head_to_body() {
 bool test_get_next_x() {
   // TODO: Implement this function.
   char testcase_next_x = 'v';
-  char testcase_wrong = '>';
+  char testcase_wrong = '^';
   unsigned int crow = 5;
   unsigned int output_next_x = get_next_row(crow, testcase_next_x);
   unsigned int output_wrong = get_next_row(crow, testcase_wrong);
   if (6 != output_next_x) { 
     printf("test not working\n");
     return false; 
-  } if (5 != output_wrong) { 
+  } if (4 != output_wrong) { 
     printf("test not working\n");
     return false; 
   }
-  printf("test works\n");
   return true;
 }
 
 bool test_get_next_y() {
   // TODO: Implement this function.
   char testcase_next_y = 'd';
-  char testcase_wrong = 'v';
+  char testcase_wrong = 'a';
   unsigned int ccol = 5;
   unsigned int output_next_y = get_next_col(ccol, testcase_next_y);
   unsigned int output_wrong = get_next_col(ccol, testcase_wrong);
   if (6 != output_next_y) { 
     printf("test not working\n");
     return false; 
-  } if (5 != output_wrong) { 
+  } if (4 != output_wrong) { 
     printf("test not working\n");
     return false; 
   }
-  printf("test works\n");
   return true;
 }
 
