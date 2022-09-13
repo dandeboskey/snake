@@ -104,9 +104,6 @@ bool test_is_tail() {
     printf("test not working\n");
     return false;
   }
-  else{
-    printf("test works\n");
-  }
   char c2 = 'W';
   bool output2 = is_tail(c2);
   if(!assert_false("output2", output2)){
@@ -122,9 +119,6 @@ bool test_is_head() {
   if (!assert_true("output_1", output_1)) {
     printf("test not working\n");
     return false;
-  }
-  else{
-    printf("test works\n");
   }
   char c2 = 'a';
   bool output2 = is_head(c2);
@@ -142,9 +136,6 @@ bool test_is_snake() {
     printf("test not working\n");
     return false;
   }
-  else {
-    printf("test works\n");
-  }
   char c2 = ' ';
   bool output2 = is_snake(c2);
   if(!assert_false("output2", output2)){
@@ -161,9 +152,6 @@ bool test_body_to_tail() {
     printf("test not working\n");
     return false;
   }
-  else {
-    printf("test works\n");
-  }
   char c2 = 'o';
   char output2 = body_to_tail(c2);
   if('?' != output2){
@@ -179,9 +167,6 @@ bool test_head_to_body() {
   if ('>' != output_1) {
     printf("test not working\n");
     return false;
-  }
-  else {
-    printf("test works\n");
   }
   char c2 = 'd';
   char output2 = head_to_body(c2);
