@@ -142,7 +142,7 @@ bool test_is_snake() {
     printf("test not working\n");
     return false;
   }
-  else{
+  else {
     printf("test works\n");
   }
   char c2 = ' ';
@@ -164,7 +164,7 @@ bool test_body_to_tail() {
   else {
     printf("test works\n");
   }
-  char c2 = ' ';
+  char c2 = 'o';
   char output2 = body_to_tail(c2);
   if('?' != output2){
     return false;
@@ -201,12 +201,11 @@ bool test_get_next_x() {
   if (6 != output_next_x) { 
     printf("test not working\n");
     return false; 
-  } else {
-    printf("test works\n");
   } if (5 != output_wrong) { 
     printf("test not working\n");
     return false; 
   }
+  printf("test works\n");
   return true;
 }
 
@@ -220,12 +219,11 @@ bool test_get_next_y() {
   if (6 != output_next_y) { 
     printf("test not working\n");
     return false; 
-  } else {
-    printf("test works\n");
   } if (5 != output_wrong) { 
     printf("test not working\n");
     return false; 
   }
+  printf("test works\n");
   return true;
 }
 
